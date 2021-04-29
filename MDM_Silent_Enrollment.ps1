@@ -1,6 +1,6 @@
 $class = cimclass MSFT_TaskEventTrigger root/Microsoft/Windows/TaskScheduler
 
-$A = New-ScheduledTaskAction -Execute " c:\windows\system32\deviceenroller.exe /c /AutoEnrollMDM"
+$A = New-ScheduledTaskAction -Execute "c:\windows\system32\deviceenroller.exe /c /AutoEnrollMDM"
 $T1 = New-ScheduledTaskTrigger -AtLogon
 
 $T2 = $class | New-CimInstance -ClientOnly
